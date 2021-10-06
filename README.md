@@ -1,1 +1,0 @@
-# Project-Flashcards-JetBrains-Academy-Frontend-Path
