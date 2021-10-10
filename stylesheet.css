@@ -3,12 +3,21 @@
     padding: 0;
     margin: 0;
 }
+
 /* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
+
+    .quiz-container {
+       left: 1px;
+    }
+
     .cards-container {
         flex-direction: column;
     }
+
+
 }
+
 #image-background {
     max-width: 100%;
     height: auto;
@@ -21,18 +30,19 @@ body {
 .title-container {
     color: #050586;
     text-align: center;
-    font-size: 24px;
-
+    font-size: 23px;
+    margin-left: 140px;
 }
-.quiz-container{
-    position: absolute;
+
+.quiz-container {
+    position:absolute;
+    flex-wrap: wrap;
     width: 800px;
     top: 1px;
-    /*bottom: 200px;*/
-    left: 350px;
+    bottom: 200px;
+    left: 300px;
     right: 200px;
     height: 650px;
-
 }
 
 .cards-container {
@@ -44,10 +54,12 @@ body {
     align-content: space-between;
     margin-top: 50px;
     margin-left: 30px;
-
+    justify-content: center;
 }
 
 .card-item {
+    font-family: "Lobster", cursive;
+    text-align: center;
     margin-left: 10px;
     margin-top: 10px;
     font-size: 37px;
@@ -58,8 +70,43 @@ body {
     background-color: #056cdc;
     color: white;
     font-style: italic;
+    transition: all 850ms linear;
+    transform-style: preserve-3d;
 }
 
-p {
-    margin-top: 50px;
+.back {
+    width: 220px;
+    height: 52px;
+
+}
+
+
+.front, .back {
+    position: center;
+    backface-visibility: hidden;
+
+}
+
+.back {
+    position: absolute;
+}
+
+.front {
+    z-index: 2;
+
+}
+
+.back {
+    z-index: 1;
+    transform: rotateY(180deg);
+    color: white;
+}
+
+.card-item:hover {
+    transform: rotateY(180deg);
+    background-color: #056cdc;;
+}
+
+.back p {
+    padding: 0;
 }
