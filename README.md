@@ -3,7 +3,7 @@
 JetBrains Academy Frontend Path.
  
 # DEMO
-https://evelinaaleksandrova.github.io/evelinaaleksandrova.github.io-Flashcards-Project-JetBrains-Academy/
+https://evelinaaleksandrova.github.io/evelinaaleksandrova.github.io-Flashcards/
 
 # Technologies:
 - HTML
